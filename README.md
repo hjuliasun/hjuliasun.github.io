@@ -1,10 +1,10 @@
 # Personal Website Workshop
-## Code taken from: [Watch it on youtube](https://youtu.be/AKNvTxWOdKw)
+## Code taken from: [Bedimcode](https://youtu.be/AKNvTxWOdKw)
 ### 
 
 - Simple Responsive Personal Portfolio Website HTML CSS & JavaScript.
-- Contains animations when scrolling.
-- Smooth scrolling in each section.
+- Simple Webiste with readble code!
+- Use this as a template and see what you can create!
 
 ![preview img](/preview.png)
 
