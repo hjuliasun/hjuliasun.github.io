@@ -1,7 +1,11 @@
-/*===== GOOGLE FONTS =====*/
+/*===== Importning custom Google Font =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-/*===== VARIABLES CSS =====*/
+
+
+
+/*===== Declaring CSS Variables =====*/
 :root {
+  /* ... (various CSS variables are defined here) ... */
   --header-height: 3rem;
   --font-semi: 600;
   /*===== Colores =====*/
@@ -15,7 +19,7 @@
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
   /*===== Margin =====*/
-  --mb-2: 1rem;
+  --mb-2: 1rem; /*  Why rem and not px? --> https://austingil.com/px-or-rem-in-css/ */
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
@@ -23,8 +27,16 @@
   --z-back: -10;
   --z-fixed: 100;
 }
+
+
+/* In CSS, @media is an at-rule that is used to apply styles based on specific conditions, typically related to  
+the characteristics of the device or screen displaying the web page. It allows you to create responsive designs
+by applying different styles for different devices, screen sizes, or other media features. */
+
+/* Media Query: Apply styles when the screen width is at least 968px */
 @media screen and (min-width: 968px) {
   :root {
+    /* Override some CSS variables for larger screens */
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
@@ -38,7 +50,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Css property, you can do smooth or auto! Try the difference! */
 }
 
 body {
@@ -153,6 +165,7 @@ img {
 }
 .nav__logo {
   color: var(--second-color);
+  font-size: 25px;
 }
 .nav__toggle {
   color: var(--second-color);
@@ -295,7 +308,7 @@ img {
   width: 85%;
 }
 .skills__js {
-  width: 65%;
+  width: 25%;
 }
 .skills__ux {
   width: 85%;
