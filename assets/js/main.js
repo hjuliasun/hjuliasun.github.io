@@ -24,36 +24,64 @@
 // navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+ 
 
-const scrollActive = () =>{
-    const scrollDown = window.scrollY
 
-  sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }                                                    
-    })
+// ================== NAV TOGGLE ==================
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
 }
-window.addEventListener('scroll', scrollActive)
 
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2000,
-    delay: 200,
-//     reset: true
+// ================== THREE.JS BROWN DWARF ==================
+const container = document.getElementById("planet-container");
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+  75,
+  container.clientWidth / 400,
+  0.1,
+  1000
+);
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(container.clientWidth, 400);
+container.appendChild(renderer.domElement);
+
+// Planet geometry + material
+const geometry = new THREE.SphereGeometry(2, 64, 64);
+const textureLoader = new THREE.TextureLoader();
+const texture = textureLoader.load("assets/img/brown_dwarf_texture.jpg"); // Add your texture
+const material = new THREE.MeshStandardMaterial({
+  map: texture,
+  roughness: 1,
+  metalness: 0.3,
 });
+const planet = new THREE.Mesh(geometry, material);
+scene.add(planet);
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+const pointLight = new THREE.PointLight(0xff8844, 1);
+pointLight.position.set(5, 3, 5);
+scene.add(pointLight);
+
+camera.position.z = 5;
+
+// Animation loop
+function animate() {
+  requestAnimationFrame(animate);
+  planet.rotation.y += 0.003;
+  planet.rotation.x += 0.0008;
+  renderer.render(scene, camera);
+}
+animate();
+
+// Responsive
+window.addEventListener("resize", () => {
+  camera.aspect = container.clientWidth / 400;
+  camera.updateProjectionMatrix();
+  renderer.setSize(container.clientWidth, 400);
+});

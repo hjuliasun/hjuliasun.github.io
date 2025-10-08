@@ -1,218 +1,198 @@
 <!-- Typical boilerplate code commonly found in most websites -->
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hannah Sun | Portfolio</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-        <!-- imports the css file! Very much needed, I mean you can try commenting it out see what happens! -->
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-        <!-- =====BOX ICONS===== -->
-        <!-- Links the site to the provided icons from this website! -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 
-        <title>Ricky's Personal Site</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/img/favicon.ico" />
+  </head>
 
-        <!-- Adds the icon to the tab  -->
-        <link rel="shortcut icon" type="image/jpg" href="/assets/img/favicon.ico"/>
+  <body>
+    <!-- HEADER -->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div><a href="#" class="nav__logo">Hannah Sun</a></div>
 
-    </head>
-    
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Ricky</a>
-                </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">Experience</a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">Projects</a>
+            </li>
+            <li class="nav__item"><a href="#art" class="nav__link">Art</a></li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Projects</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Resume</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact me!</a></li>
-                    </ul>
-                </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+    <main class="l-main">
+      <!-- HOME -->
+      <section class="home bd-grid" id="home">
+        <div id="planet-container"></div>
+        <div class="home__data">
+          <h1 class="home__title">
+            Hi, I'm <span class="home__title-color">Hannah Sun</span>
+          </h1>
+          <p>
+            Data Science & Planetary Science Student | Cybersecurity Researcher
+            | Exoplanet Enthusiast
+          </p>
+          <a href="#contact" class="button">Get in touch</a>
+        </div>
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Ricky</span><br> The Cutest Dog</h1>
+        <div class="home__social">
+          <a
+            href="https://linkedin.com/in/hannah-sun"
+            class="home__social-icon"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="https://github.com/hannah-sun" class="home__social-icon"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://instagram.com/" class="home__social-icon"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+        </div>
+      </section>
 
-                    <a href="#contact" class="button">Contact me!</a>
-                </div>
+      <!-- EXPERIENCE -->
+      <section class="experience section" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="bd-grid">
+          <div class="experience__item">
+            <h3>Honda Research Institute – Research Assistant</h3>
+            <p>
+              Developed secure VPN communication protocols and simulated
+              cyberattacks to evaluate network resilience and confidentiality.
+            </p>
+            <span>Sept 2024 – Present</span>
+          </div>
 
-                <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
+          <div class="experience__item">
+            <h3>MITRE Corporation – AI Governance Intern</h3>
+            <p>
+              Authored a white paper on AI governance frameworks for government
+              stakeholders and presented findings on backdoor and data
+              degradation attacks to MITRE experts.
+            </p>
+            <span>Summer 2024</span>
+          </div>
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="2" y="40" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+          <div class="experience__item">
+            <h3>Exoplanet Research Team – Lead Research Assistant</h3>
+            <p>
+              Led research on brown dwarf radial velocity data analysis and
+              implemented statistical modeling using ORVARA and Python
+              visualization tools.
+            </p>
+            <span>2023 – 2024</span>
+          </div>
+        </div>
+      </section>
 
-            <!--===== ABOUT =====-->
-            <!-- Here were making class labled as "section-title" and its labeling anything with the class to be joined together -->
-            <section class="about section " id="about">
-                <h2 class="section-title">About me!</h2>
+      <!-- PROJECTS -->
+      <section class="projects section" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="work__container bd-grid">
+          <div class="work__img">
+            <img src="assets/img/project1.jpg" alt="" />
+            <p>Twitter Bot Detection (DistilBERT + TensorFlow)</p>
+          </div>
+          <div class="work__img">
+            <img src="assets/img/project2.jpg" alt="" />
+            <p>Secure VPN System with Simulated Attacks</p>
+          </div>
+          <div class="work__img">
+            <img src="assets/img/project3.jpg" alt="" />
+            <p>Yelp Database Analytics (JSON parsing & SQL)</p>
+          </div>
+        </div>
+      </section>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'm Ricky</h2>
-                        <p class="about__text">Hi there, the names Ricky.. pronounced wiki! I am a cross-country dog runner. I have competed competitively twice in my lifetime and bought home the gold zero times. I decided it wasn't for me so I tried taking pictures of myself and uploading them to pinterest and now I'm a full time dog-fluencer.  </p>           
-                    </div>                                   
-                </div>
-            </section>
+      <!-- ART PORTFOLIO -->
+      <section class="art section" id="art">
+        <h2 class="section-title">Art Portfolio</h2>
+        <div class="art__container bd-grid">
+          <img src="assets/art/art1.jpg" class="art__img" alt="" />
+          <img src="assets/art/art2.jpg" class="art__img" alt="" />
+          <img src="assets/art/art3.jpg" class="art__img" alt="" />
+        </div>
+      </section>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Achievements!</h2>
+      <!-- CONTACT -->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact__container bd-grid">
+          <form action="#" class="contact__form">
+            <input
+              type="text"
+              placeholder="Name"
+              class="contact__input"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="contact__input"
+              required
+            />
+            <textarea
+              name="message"
+              cols="0"
+              rows="10"
+              class="contact__input"
+              placeholder="Your message"
+            ></textarea>
+            <input
+              type="submit"
+              value="Send Message"
+              class="contact__button button"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Achievements!</h2>
-                        <p class="skills__text">To simply put I have lots of skills, I'll only list a couple here but contact me! to learn more!</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-baidu skills__icon'></i>
-                                <span class="skills__name">Barking</span>
-                            </div>
-                            <div class="skills__bar skills__html">
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer__title">Hannah Sun</p>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/hnnahsun/" class="footer__icon"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a href="https://github.com/hjuliasun" class="footer__icon"
+          ><i class="bx bxl-github"></i
+        ></a>
+      </div>
+    </footer>
 
-                            </div>
-                            <!-- Here we are showing up the actual number "95%", but if you want the bar to be accurate change the css of it on line 304 in style.css -->
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-pinterest
-                                skills__icon'></i>
-                                <span class="skills__name">Perfecting Angles</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-laugh skills__icon' ></i>
-                                <span class="skills__name">Being Selfless </span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">25%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-meh skills__icon'></i>
-                                <span class="skills__name">Modeling</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">More of Me!</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact me!</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enter" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Ricky</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-            </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-        </footer>
-
-
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
