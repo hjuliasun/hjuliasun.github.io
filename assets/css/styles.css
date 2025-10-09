@@ -539,9 +539,28 @@ img {
   transition: box-shadow .4s, opacity .4s;
 }
 
+.projects__button:hover{
+  box-shadow: 0 0 24px var(--first-color);
+}
+
+.projects__image:hover .projects__button{
+  opacity: 1;
+  pointer-events: initial;
+}
+
 /* Swiper class */
+.projects__swiper{
+  margin-inline: initial;
+  padding-bottom: 2rem;
+}
 
-
+.projects .swiper-pagination-bullets{
+  bottom:0;
+}
+.projects .swiper-pagination-bullets{
+  background-color: var(--first-color);
+  transition: opacity .4s;
+}
 /*=============== WORK ===============*/
 
 
@@ -587,6 +606,10 @@ img {
     width: 220px;
     height: 220px;
   }
+
+  .projects__card{
+    padding-inline: 1rem;
+  }
 }
 
 /* For medium devices */
@@ -603,6 +626,15 @@ img {
   .about__data,
   .about__data .section__title{
     text-align: center;
+  }
+
+  :is(.projects) .section__title{
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .projects__card{
+    width: 350px;
   }
 }
 
@@ -730,6 +762,35 @@ img {
   .about__shadow{
     height: 600px;
     bottom: 0;
+  }
+
+  .projects{
+    padding-block: 9rem 4rem;
+  }
+
+  .projects__swiper{
+    padding-bottom: 4rem;
+  }
+
+  .projects__container{
+    max-width: 1380px;
+  }
+
+  .projects__card{
+    width: 440px;
+    padding: 2.5rem;
+    border-radius: 4rem;
+  }
+
+  .projects__subtitle, .projects__description{
+    font-size: var(--normal-font-size);
+  }
+  .projects__img{
+    border-radius: 2rem;
+  }
+  .projects__button{
+    top: 1.5rem;
+    right: 1.5rem;
   }
 }
 
