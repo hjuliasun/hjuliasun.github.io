@@ -1,198 +1,259 @@
 <!-- Typical boilerplate code commonly found in most websites -->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hannah Sun | Portfolio</title>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-    <!-- Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
-    <!-- Three.js -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <link rel="shortcut icon" type="image/jpg" href="assets/img/favicon.ico" />
-  </head>
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
 
-  <body>
-    <!-- HEADER -->
-    <header class="l-header">
-      <nav class="nav bd-grid">
-        <div><a href="#" class="nav__logo">Hannah Sun</a></div>
+      <title>Hannah J Sun</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <div class="blob-animate"></div>
+         <nav class="nav container">
+            <a href="#" class="nav__logo">Hannah Sun</a>
+            <div class="nav__menu">
+               <ul class="nav__list">
+                  <li>
+                     <a href="#about" class="nav__link">About Me</a>
+                  </li>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#experience" class="nav__link">Experience</a>
-            </li>
-            <li class="nav__item">
-              <a href="#projects" class="nav__link">Projects</a>
-            </li>
-            <li class="nav__item"><a href="#art" class="nav__link">Art</a></li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
-            </li>
-          </ul>
-        </div>
+                  <li>
+                     <a href="#experience" class="nav__link">Experience</a>
+                  </li>
+                  <li>
+                     <a href="#research" class="nav__link">Research</a>
+                  </li>
+                  <li>
+                     <a href="#projects" class="nav__link">Projects</a>
+                  </li>
+               
 
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
-        </div>
-      </nav>
-    </header>
+               </ul>
+            </div>
+         </nav>
 
-    <main class="l-main">
-      <!-- HOME -->
-      <section class="home bd-grid" id="home">
-        <div id="planet-container"></div>
-        <div class="home__data">
-          <h1 class="home__title">
-            Hi, I'm <span class="home__title-color">Hannah Sun</span>
-          </h1>
-          <p>
-            Data Science & Planetary Science Student | Cybersecurity Researcher
-            | Exoplanet Enthusiast
-          </p>
-          <a href="#contact" class="button">Get in touch</a>
-        </div>
+      </header>
 
-        <div class="home__social">
-          <a
-            href="https://linkedin.com/in/hannah-sun"
-            class="home__social-icon"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a href="https://github.com/hannah-sun" class="home__social-icon"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="https://instagram.com/" class="home__social-icon"
-            ><i class="bx bxl-instagram"></i
-          ></a>
-        </div>
-      </section>
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!-- CUSTOM CURSOR -->
+         
+         <!--==================== HOME ====================-->
+         <section class="home section">
+            <div class="home__shadow"></div>
+            <div class="home__container container grid">
+               <div class="home__data">
+                  <h3 class="home__greeting">Welcome, I'm</h3>
+                  <h1 class="home__name">Hannah <br> Sun</h1>
+               </div>
 
-      <!-- EXPERIENCE -->
-      <section class="experience section" id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="bd-grid">
-          <div class="experience__item">
-            <h3>Honda Research Institute – Research Assistant</h3>
-            <p>
-              Developed secure VPN communication protocols and simulated
-              cyberattacks to evaluate network resilience and confidentiality.
-            </p>
-            <span>Sept 2024 – Present</span>
-          </div>
+               <div class="home__image">
+                  <div class="blob-animate"></div>
+                  <img src="assets/img/logo4.png" alt="image" class="home__perfil">
+               </div>
 
-          <div class="experience__item">
-            <h3>MITRE Corporation – AI Governance Intern</h3>
-            <p>
-              Authored a white paper on AI governance frameworks for government
-              stakeholders and presented findings on backdoor and data
-              degradation attacks to MITRE experts.
-            </p>
-            <span>Summer 2024</span>
-          </div>
+               <div class="home__info">
+                  <h3 class="home__split">Data Scientist</h3>
+                  <h2 class="home__profession-1">Cyber Analytics</h2>
+                  <h2 class="home__profession-2">Data & AI Governance</h2>
+               </div>
 
-          <div class="experience__item">
-            <h3>Exoplanet Research Team – Lead Research Assistant</h3>
-            <p>
-              Led research on brown dwarf radial velocity data analysis and
-              implemented statistical modeling using ORVARA and Python
-              visualization tools.
-            </p>
-            <span>2023 – 2024</span>
-          </div>
-        </div>
-      </section>
+               <div class="home__social">
+                  <a href="https://www.linkedin.com/in/hnnahsun/" target="_blank" class="home__social-link">
+                     <i class="ri-linkedin-box-fill"></i>
+                  </a>
+                  <a href="https://github.com/hjuliasun/" target="_blank" class="home__social-link">
+                     <i class="ri-github-fill"></i>
+                  </a>
+               </div>
 
-      <!-- PROJECTS -->
-      <section class="projects section" id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="work__container bd-grid">
-          <div class="work__img">
-            <img src="assets/img/project1.jpg" alt="" />
-            <p>Twitter Bot Detection (DistilBERT + TensorFlow)</p>
-          </div>
-          <div class="work__img">
-            <img src="assets/img/project2.jpg" alt="" />
-            <p>Secure VPN System with Simulated Attacks</p>
-          </div>
-          <div class="work__img">
-            <img src="assets/img/project3.jpg" alt="" />
-            <p>Yelp Database Analytics (JSON parsing & SQL)</p>
-          </div>
-        </div>
-      </section>
+               <a href="assets/pdf/Resume_HSun_W.pdf" download target="_blank" class="home__cv">
+                  Resume <i class="ri-download-line"></i>
+               </a>
+            </div>
+         </section>
 
-      <!-- ART PORTFOLIO -->
-      <section class="art section" id="art">
-        <h2 class="section-title">Art Portfolio</h2>
-        <div class="art__container bd-grid">
-          <img src="assets/art/art1.jpg" class="art__img" alt="" />
-          <img src="assets/art/art2.jpg" class="art__img" alt="" />
-          <img src="assets/art/art3.jpg" class="art__img" alt="" />
-        </div>
-      </section>
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__shadow"></div>
+            <div class="about__container container grid">
+               <div class="about__data">
+                  <h2 class="section__title">
+                     <span>Creative. Motivated. Curious.</span>
+                     <br>About Me
+                  </h2>
 
-      <!-- CONTACT -->
-      <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact__container bd-grid">
-          <form action="#" class="contact__form">
-            <input
-              type="text"
-              placeholder="Name"
-              class="contact__input"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              class="contact__input"
-              required
-            />
-            <textarea
-              name="message"
-              cols="0"
-              rows="10"
-              class="contact__input"
-              placeholder="Your message"
-            ></textarea>
-            <input
-              type="submit"
-              value="Send Message"
-              class="contact__button button"
-            />
-          </form>
-        </div>
-      </section>
-    </main>
+                  <p class="about__description">
+                     I'm a recent Smith College graduate with a multidisciplinary background in <b>Statistical and Data Sciences</b>, driving data-driven solutions across <b>Astrophysics, Chemical Biology and Information Technology</b> applications. 
+                     I have experience in <b>Adversarial Machine Learning (AML), cybersecurity, and data and AI governance.</b> 
+                     I'm a quick, enthusiastic learner and creative problem-solver, utilizing data in a multitude of applications to design better informed solutions.                     
+                  </p>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p class="footer__title">Hannah Sun</p>
-      <div class="footer__social">
-        <a href="https://www.linkedin.com/in/hnnahsun/" class="footer__icon"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
-        <a href="https://github.com/hjuliasun" class="footer__icon"
-          ><i class="bx bxl-github"></i
-        ></a>
-      </div>
-    </footer>
+                  <a href="assets/pdf/Resume_HSun_W.pdf" download target = "_blank" class="button">
+                     Resume <i class="ri-download-line"></i>
+                  </a>
+               </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
-  </body>
+               <div class="about__image">
+                  <div class="blob-animate"></div> 
+                  <div class="blob-animate"></div> 
+                  <img src="assets/img/logo2.png" alt="image" class="about__perfil">
+               </div>
+            </div>
+         </section>
+
+         <!--==================== PROJECTS ====================-->
+         <section class="projects section" id="projects">
+            <h2 class="section__title">
+               I Make Incredible <br>
+               <span>Projects</span>
+            </h2>
+            <div class="projects__container container grid">
+               <div class="projects__swiper">
+                  <div>
+                     <article class="projects__card">
+                        <div class="blob"></div>
+
+                        <div class="projects__number">
+                           <h1>01</h1>
+                           <h3>LLM & Sentiment Analysis</h3>
+                        </div>
+
+                        <div class="projects__data">
+                           <h1 class="projects__title">Sentiment Tracking and Evaluation for Research (STEER)</h1>
+                           <p class="projects__subtitle">Technologies used:</p>
+                           <p class="projects__description">Python, Matplotlib, Pandas, Gradio, BERT, OpenAI's GPT-4o mini</p>
+                        </div>
+
+                        <div class="projects__image">
+                           <img src="assets/img/proj1.png" alt="image" class="projects__img">
+                           <a href="#" target= "_blank" class="projects__button">
+                              <i class="ri-arrow-right-up-long-line"></i>
+                           </a>
+                        </div>
+                     </article>
+
+                     <article class="projects__card">
+                        <div class="blob"></div>
+
+                        <div class="projects__number">
+                           <h1>02</h1>
+                           <h3>Game Design</h3>
+                        </div>
+
+                        <div class="projects__data">
+                           <h1 class="projects__title">Website Game for Korean Card Game: Go-Stop (화투)</h1>
+                           <p class="projects__subtitle">Technologies used:</p>
+                           <p class="projects__description">HTML, Figma , Matplotlib, Pandas, Gradio, BERT, OpenAI's GPT-4o mini</p>
+                        </div>
+
+                        <div class="projects__image">
+                           <img src="assets/img/proj2.png" alt="image" class="projects__img">
+                           <a href="#" target= "_blank" class="projects__button">
+                              <i class="ri-arrow-right-up-long-line"></i>
+                           </a>
+                        </div>
+                     </article>
+
+                     <article class="projects__card">
+                        <div class="blob"></div>
+
+                        <div class="projects__number">
+                           <h1>03</h1>
+                           <h3>Game</h3>
+                        </div>
+
+                        <div class="projects__data">
+                           <h1 class="projects__title"></h1>
+                           <p class="projects__subtitle">Technologies used:</p>
+                           <p class="projects__description">Python, Matplotlib, Pandas, Gradio, BERT, OpenAI's GPT-4o mini</p>
+                        </div>
+
+                        <div class="projects__image">
+                           <img src="assets/img/proj2.png" alt="image" class="projects__img">
+                           <a href="#" target= "_blank" class="projects__button">
+                              <i class="ri-arrow-right-up-long-line"></i>
+                           </a>
+                        </div>
+                     </article>
+
+                     <article class="projects__card">
+                        <div class="blob"></div>
+
+                        <div class="projects__number">
+                           <h1>04</h1>
+                           <h3>LLM & Sentiment Analysis</h3>
+                        </div>
+
+                        <div class="projects__data">
+                           <h1 class="projects__title">Sentiment Tracking and Evaluation for Research (STEER)</h1>
+                           <p class="projects__subtitle">Technologies used:</p>
+                           <p class="projects__description">Python, Matplotlib, Pandas, Gradio, BERT, OpenAI's GPT-4o mini</p>
+                        </div>
+
+                        <div class="projects__image">
+                           <img src="assets/img/proj2.png" alt="image" class="projects__img">
+                           <a href="#" target= "_blank" class="projects__button">
+                              <i class="ri-arrow-right-up-long-line"></i>
+                           </a>
+                        </div>
+                     </article>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== WORK ====================-->
+         <section class="work section">
+
+         </section>
+
+         <!--==================== SERVICES ====================-->
+         <section class="services section">
+
+         </section>
+
+         <!--==================== TESTIMONIALS ====================-->
+         <section class="testimonials section">
+
+         </section>
+
+         <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contact">
+            
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer grid">
+         
+      </footer>
+      
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+
+      <!--=============== ANIME JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
+

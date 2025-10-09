@@ -28,60 +28,59 @@
 
 
 // ================== NAV TOGGLE ==================
-const navToggle = document.getElementById("nav-toggle");
-const navMenu = document.getElementById("nav-menu");
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
-}
+// ================== THREE.JS EARTH ==================
+// tutorial 
+/*=============== HOME SPLIT TEXT ===============*/
+const { animate, text, stagger} = anime
+const { chars: chars1 } = text.split('.home__profession-1', { chars: true });
+const { chars: chars2 } = text.split('.home__profession-2', { chars: true });
 
-// ================== THREE.JS BROWN DWARF ==================
-const container = document.getElementById("planet-container");
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-  75,
-  container.clientWidth / 400,
-  0.1,
-  1000
-);
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-renderer.setSize(container.clientWidth, 400);
-container.appendChild(renderer.domElement);
-
-// Planet geometry + material
-const geometry = new THREE.SphereGeometry(2, 64, 64);
-const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("assets/img/brown_dwarf_texture.jpg"); // Add your texture
-const material = new THREE.MeshStandardMaterial({
-  map: texture,
-  roughness: 1,
-  metalness: 0.3,
+animate(chars1, {
+  y: [
+    { to: ['100%', '0%'] },
+    { to: '-100%', delay: 4000, ease: 'in(3)' }
+  ],
+  duration: 900,
+  ease: 'out(3)',
+  delay: stagger(80),
+  loop: true,
 });
-const planet = new THREE.Mesh(geometry, material);
-scene.add(planet);
 
-// Lighting
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-scene.add(ambientLight);
-const pointLight = new THREE.PointLight(0xff8844, 1);
-pointLight.position.set(5, 3, 5);
-scene.add(pointLight);
+animate(chars2, {
+  y: [
+    { to: ['100%', '0%'] },
+    { to: '-100%', delay: 4000, ease: 'in(3)' }
+  ],
+  duration: 900,
+  ease: 'out(3)',
+  delay: stagger(80),
+  loop: true,
+})
+/*=============== SWIPER PROJECTS ===============*/
 
-camera.position.z = 5;
 
-// Animation loop
-function animate() {
-  requestAnimationFrame(animate);
-  planet.rotation.y += 0.003;
-  planet.rotation.x += 0.0008;
-  renderer.render(scene, camera);
-}
-animate();
+/*=============== WORK TABS ===============*/
 
-// Responsive
-window.addEventListener("resize", () => {
-  camera.aspect = container.clientWidth / 400;
-  camera.updateProjectionMatrix();
-  renderer.setSize(container.clientWidth, 400);
-});
+
+/*=============== SERVICES ACCORDION ===============*/
+
+
+/*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
+
+
+/*=============== COPY EMAIL IN CONTACT ===============*/
+
+
+/*=============== CURRENT YEAR OF THE FOOTER ===============*/ 
+
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+
+
+/*=============== CUSTOM CURSOR ===============*/
+
+
+/* Hide custom cursor on links */
+
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
